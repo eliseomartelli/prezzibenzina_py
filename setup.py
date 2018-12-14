@@ -5,7 +5,7 @@ with open('README.rst', 'r') as fh:
 
 setuptools.setup(
     name="prezzibenzina_py",
-    version="1.1.3",
+    version="1.1.4",
     author="Eliseo Martelli",
     author_email="me@eliseomartelli.it",
     description="A python package to get Prezzibenzina info",

@@ -19,3 +19,8 @@ class PrezziBenzinaPy():
             }
             gas_list.append(gas)
         return gas_list
+
+    def get_station_name(self, id):
+        r = requests.get(BASE_URL.format(id))
+        soup = BeautifulSoup(r.text, 'html.parser')
+        return soup.find('div', {"class": "st_name"}).text
