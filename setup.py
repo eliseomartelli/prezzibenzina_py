@@ -1,24 +1,21 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-    Setup file for prezzibenzina_py.
-    Use setup.cfg to configure your project.
+import setuptools
 
-    This file was generated with PyScaffold 3.1.
-    PyScaffold helps you to put up the scaffold of your new Python project.
-    Learn more under: https://pyscaffold.org/
-"""
-import sys
+with open('README.rst', 'r') as fh:
+    long_description = fh.read()
 
-from pkg_resources import require, VersionConflict
-from setuptools import setup
-
-try:
-    require('setuptools>=38.3')
-except VersionConflict:
-    print("Error: version of setuptools is too old (<38.3)!")
-    sys.exit(1)
-
-
-if __name__ == "__main__":
-    setup(use_pyscaffold=True)
+setuptools.setup(
+    name="prezzibenzina_py",
+    version="1.1.3",
+    author="Eliseo Martelli",
+    author_email="me@eliseomartelli.it",
+    description="A python package to get Prezzibenzina info",
+    long_description=long_description,
+    url="https://github.com/eliseomartelli/prezzibenzina_py",
+    packages=setuptools.find_packages(),
+    install_requires=list(val.strip() for val in open('requirements.txt')),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
