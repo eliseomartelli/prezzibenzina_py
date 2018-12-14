@@ -18,5 +18,3 @@ class PrezziBenzinaPy():
                 'price': row.find('div', {"class": "st_reports_price"}).text
             }
             gas_list.append(gas)
-
-        print(gas_list)
